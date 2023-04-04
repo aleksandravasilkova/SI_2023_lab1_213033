@@ -1,0 +1,400 @@
+
+vasil@Aleksandra MINGW64 ~
+$ status
+bash: status: command not found
+
+vasil@Aleksandra MINGW64 ~
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+vasil@Aleksandra MINGW64 ~
+$ mkdir SI_2023_lab1_213033
+
+vasil@Aleksandra MINGW64 ~
+$ cd SI_2023_lab1_213033
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033
+$ git init
+Initialized empty Git repository in C:/Users/vasil/SI_2023_lab1_213033/.git/
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git remote add origin https://github.com/aleksandravasilkova/SI_2023_lab1_213033.git
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ notepad README.md
+git add README.md
+git commit -m "Initial commit"
+
+s
+git
+
+$ git status
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git add README.mk
+fatal: pathspec 'README.mk' did not match any files
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git add README.md
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 937fbde] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git add SILab1.java
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git commit -m "Add java class"
+[master cf65dd9] Add java class
+ 1 file changed, 41 insertions(+)
+ create mode 100644 SILab1.java
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git push origin -u origin master
+error: src refspec origin does not match any
+error: failed to push some refs to 'https://github.com/aleksandravasilkova/SI_2023_lab1_213033.git'
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git push -u origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 820 bytes | 273.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/aleksandravasilkova/SI_2023_lab1_213033.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git branch bug1
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git branch bug2
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git branch bug 3
+fatal: not a valid object name: '3'
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git checkout bug 1
+error: pathspec 'bug' did not match any file(s) known to git
+error: pathspec '1' did not match any file(s) known to git
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug1)
+$ nano SILab1.java
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug1)
+$ git add SILab1.java
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug1)
+$ git commit -m "Fix wrong loop for reading"
+[bug1 a4df3e0] Fix wrong loop for reading
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug2)
+$ nano SILab1.java
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug2)
+$ git add SILab1.java
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug2)
+$ git commit -m "Fix wrong condition in filterOddNumbers"
+[bug2 f9563db] Fix wrong condition in filterOddNumbers
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug2)
+$ git checkout bug3
+error: pathspec 'bug3' did not match any file(s) known to git
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug2)
+$ git branch bug3
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug2)
+$ git checkout bug3
+Switched to branch 'bug3'
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+$ nano SILab1.java
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+$ git add SILab1.java
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+$ $ git commit -m "Fix method sumEvenNumbers"
+bash: $: command not found
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+$ git commit -m "Fix method sumEvenNumbers"
+[bug3 a4f1c83] Fix method sumEvenNumbers
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug1)
+$ git push -u origin bug1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 342 bytes | 171.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/aleksandravasilkova/SI_2023_lab1_213033/pull/new/bug1
+remote:
+To https://github.com/aleksandravasilkova/SI_2023_lab1_213033.git
+ * [new branch]      bug1 -> bug1
+branch 'bug1' set up to track 'origin/bug1'.
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug1)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug2)
+$ git push -u origin bug2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 359 bytes | 359.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/aleksandravasilkova/SI_2023_lab1_213033/pull/new/bug2
+remote:
+To https://github.com/aleksandravasilkova/SI_2023_lab1_213033.git
+ * [new branch]      bug2 -> bug2
+branch 'bug2' set up to track 'origin/bug2'.
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug2)
+$ git checkout bug3
+Switched to branch 'bug3'
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+$ git push -u origin bug3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 352 bytes | 352.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'bug3' on GitHub by visiting:
+remote:      https://github.com/aleksandravasilkova/SI_2023_lab1_213033/pull/new/bug3
+remote:
+To https://github.com/aleksandravasilkova/SI_2023_lab1_213033.git
+Merge made by the 'ort' strategy.
+ SILab1.java | 2 +-p to track 'origin/bug3'.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ itched to branch 'master'
+Your branch is up to date with 'origin/master'.
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ sil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git merge bug1
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git push
+ SILab1.java | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/aleksandravasilkova/SI_2023_lab1_213033.git
+   cf65dd9..a4df3e0  master -> master
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git merge bug2
+Auto-merging SILab1.java
+hint: Waiting for your editor to close the file...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 367 bytes | 367.00 KiB/s, done.
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/aleksandravasilkova/SI_2023_lab1_213033.git
+   a4df3e0..cd9022f  master -> master
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+g
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+i
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+t
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git push
+Everything up-to-date
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git checkout bug3
+Switched to branch 'bug3'
+Your branch is up to date with 'origin/bug3'.
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+$ git rebase master
+Successfully rebased and updated refs/heads/bug3.
+g
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+$ git pull
+git pushAuto-merging SILab1.java
+Merge made by the 'ort' strategy.
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 525 bytes | 525.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/aleksandravasilkova/SI_2023_lab1_213033.git
+   a4f1c83..cea7a0c  bug3 -> bug3
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (bug3)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git merge bug3
+Updating cd9022f..cea7a0c
+Fast-forward
+ SILab1.java | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/aleksandravasilkova/SI_2023_lab1_213033.git
+   cd9022f..cea7a0c  master -> master
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ -logs.txt created in directory
+bash: -logs.txt: command not found
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$ ^C
+
+vasil@Aleksandra MINGW64 ~/SI_2023_lab1_213033 (master)
+$
